@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  margin-top: 10px;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -41,4 +42,30 @@
   height: 50%;
   width: 20%;
   pointer-events: none;
+}
+
+.Looped-video {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "BlackBubbles-Regular";
+  src: url('./assets/BlackBubbles-Regular.ttf') format('truetype');
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  color: #174420;
+
+}
+.fade-in.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
