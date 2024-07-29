@@ -58,9 +58,9 @@ const MainView = (props) => {
         <FadeInSection
           alignment={Alignment.CENTER}
           message={
-            <Box display="flex" sx={{ display: "flex", flexDirection: "row" }}>
-              <TextField variant="outlined">Email address</TextField>
-              <Button startIcon={<Avatar src={pickleball} />} />
+            <Box>
+              <TextField variant="outlined">Email</TextField>
+              <Button startIcon={<Avatar src={pickleball} />}>Submit!</Button>
             </Box>
           }
         />

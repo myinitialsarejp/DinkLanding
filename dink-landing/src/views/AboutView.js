@@ -1,6 +1,4 @@
-import { Paper } from '@mui/material'
 import * as React from 'react'
-import ColorCode from '../enum/colorCodes.ts'
 
 const AboutView = (props) => {
 
