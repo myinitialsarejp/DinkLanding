@@ -1,6 +1,5 @@
 import logo from "../assets/logo.svg";
 import dinkLogo from "../assets/dinkLogo.svg";
-import CopyrightIcon from "@mui/icons-material/Copyright";
 import MenuBar from "../components/MenuBar";
 import myVideo from "../assets/pickleball.mov";
 import pickleball from "../assets/logo.svg";
@@ -9,13 +8,12 @@ import {
   Box,
   Button,
   Grid,
-  Paper,
   TextField,
   Typography,
 } from "@mui/material";
-import { ColorCode } from "../enum/colorCodes.ts";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
+import Footer from "../components/Footer.js";
 
 const MainView = (props) => {
   return (
@@ -66,15 +64,7 @@ const MainView = (props) => {
         />
       </Grid>
 
-      <Paper sx={{ backgroundColor: ColorCode.BlueCuracao, width: "100%" }}>
-        <Box
-          sx={{ display: "flex", flexDirection: "row", textAlign: "center" }}
-        >
-          <CopyrightIcon />
-          <Typography>Dink,Inc</Typography>
-        </Box>
-        <Typography>7701 Pineville-Matthews Rd, Charlotte, NC 28226</Typography>
-      </Paper>
+      <Footer />
     </div>
   );
 };
