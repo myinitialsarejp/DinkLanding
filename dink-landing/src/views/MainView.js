@@ -1,11 +1,9 @@
-import logo from "../assets/logo.svg";
 import dinkLogo from "../assets/dinkLogo_light.svg";
 import MenuBar from "../components/MenuBar";
 import myVideo from "../assets/pickleball.mov";
 import {
   Grid,
   Typography,
-  useTheme,
 } from "@mui/material";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
