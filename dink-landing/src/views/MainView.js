@@ -1,19 +1,16 @@
 import logo from "../assets/logo.svg";
-import dinkLogo from "../assets/dinkLogo.svg";
+import dinkLogo from "../assets/dinkLogo_light.svg";
 import MenuBar from "../components/MenuBar";
 import myVideo from "../assets/pickleball.mov";
-import pickleball from "../assets/logo.svg";
 import {
-  Avatar,
-  Box,
-  Button,
   Grid,
-  TextField,
   Typography,
+  useTheme,
 } from "@mui/material";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
 import Footer from "../components/Footer.js";
+import SignUpSection from "../components/SignUpSection.js";
 
 const MainView = (props) => {
   return (
@@ -22,8 +19,7 @@ const MainView = (props) => {
         <source src={myVideo} type="video/mp4"></source>
       </video>
       <MenuBar />
-      <img src={logo} className="App-logo" alt="logo" />
-      <Grid container justifyContent='center' spacing={2}>
+      <Grid sx={{padding: '5%'}} alignItems='center' container justifyContent="center" spacing={2}>
         <FadeInSection
           alignment={Alignment.LEFT}
           message={<Typography>We play pickleball...</Typography>}
@@ -51,15 +47,20 @@ const MainView = (props) => {
         />
         <FadeInSection
           alignment={Alignment.CENTER}
-          message={<Typography>Join us and sign up for our Beta!</Typography>}
-        />
-        <FadeInSection
-          alignment={Alignment.CENTER}
           message={
-            <Box>
-              <TextField variant="outlined">Email</TextField>
-              <Button startIcon={<Avatar src={pickleball} />}>Submit!</Button>
-            </Box>
+            <>
+              {/* <Typography>Join us and sign up for our Beta!</Typography>
+              <Box display="flex" justifyContent="center">
+                <TextField
+                  sx={{ input: {color: ColorCode.RynFlesh}}}
+                  defaultValue="Email"
+                  margin="dense"
+                  variant="outlined"
+                ></TextField>
+                <Button sx={{ backgroundColor: ColorCode.StormGreen, ml:'20px'}} size='large' variant='contained'>Submit!</Button>
+              </Box> */}
+              <SignUpSection />
+            </>
           }
         />
       </Grid>
