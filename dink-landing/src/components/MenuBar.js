@@ -19,7 +19,7 @@ const MenuBar = (props) => {
 
   const handleMenu = (e) => {
     setShowMenu(true);
-    setAnchorEl(e.currentTarget);
+    setAnchorEl();
   };
 
   const handleClose = () => {

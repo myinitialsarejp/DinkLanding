@@ -1,23 +1,23 @@
 import dinkLogo from "../assets/dinkLogo_light.svg";
-import MenuBar from "../components/MenuBar";
-import myVideo from "../assets/pickleball.mov";
-import {
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
 import Footer from "../components/Footer.js";
 import SignUpSection from "../components/SignUpSection.js";
+import VideoLogo from "../components/VideoLogo.js";
 
-const MainView = (props) => {
+const MainView = () => {
   return (
     <div>
-      <video autoPlay loop muted className="Looped-video" style={{ top: 0 }}>
-        <source src={myVideo} type="video/mp4"></source>
-      </video>
-      <MenuBar />
-      <Grid sx={{padding: '5%'}} alignItems='center' container justifyContent="center" spacing={2}>
+      <VideoLogo />
+      {/*<MenuBar />*/}
+      <Grid
+        sx={{ marginTop: '300px',padding: "5%" }}
+        alignItems="center"
+        container
+        justifyContent="center"
+        spacing={2}
+      >
         <FadeInSection
           alignment={Alignment.LEFT}
           message={<Typography>We play pickleball...</Typography>}
@@ -30,8 +30,8 @@ const MainView = (props) => {
           alignment={Alignment.LEFT}
           message={
             <Typography>
-              We saw a need for a way to find new partners, find new courts, and
-              find new ways to play...
+              We saw a need for a way to find new partners, new courts, and new
+              ways to play...
             </Typography>
           }
         />
