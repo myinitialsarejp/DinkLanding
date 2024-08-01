@@ -5,6 +5,7 @@ import dinkLogo from "../assets/dinkLogo.svg";
 const VideoLogo = (props) => {
   return (
     <div className="Video-logo">
+    
       <video autoPlay loop muted className="Looped-video">
         <source src={myVideo} type="video/mp4"></source>
       </video>
