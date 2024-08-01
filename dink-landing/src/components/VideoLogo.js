@@ -1,4 +1,3 @@
-import { Box, Container } from "@mui/material";
 import * as React from "react";
 import myVideo from "../assets/pickleball.mov";
 import dinkLogo from "../assets/dinkLogo.svg";
