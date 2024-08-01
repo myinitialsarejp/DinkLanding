@@ -12,7 +12,7 @@ const MainView = () => {
       <VideoLogo />
       {/*<MenuBar />*/}
       <Grid
-        sx={{ marginTop: '300px',padding: "5%" }}
+        sx={{padding: "5%" }}
         alignItems="center"
         container
         justifyContent="center"
