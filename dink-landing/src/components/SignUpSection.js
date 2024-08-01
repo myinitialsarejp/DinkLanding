@@ -3,7 +3,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { ColorCode } from "../enum/colorCodes.ts";
@@ -18,25 +17,36 @@ export default function SignUpSection(props) {
 
   const StyledTextField = styled(TextField)({
     input: {
-        color: ColorCode.StormGreen
-    }
-  })
+      color: ColorCode.StormGreen,
+      fontFamily: "Lato",
+    },
+    label: {
+      color: ColorCode.StormGreen,
+      fontFamily: "Lato",
+    },
+    color: ColorCode.StormGreen,
+    fontFamily: "Lato",
+  });
+
+  const onSubmit = (event) =>{
+    event.preventDefault();
+    console.log("Submitted");
+  }
 
   return (
     <section>
-      <Container maxWidth="xs" >
+      <Container maxWidth="xs">
         <Box pt={8} pb={10}>
           <Box mb={3} textAlign="center">
-            <Typography >
-              {content["header"]}
-            </Typography>
+            <Typography>{content["header"]}</Typography>
           </Box>
           <Box>
-            <form noValidate>
-              <Paper elevation={12} sx={{padding:'10%', fontSize:'16px'}}>
+            <form noValidate onSubmit={onSubmit}>
+              <Paper elevation={12} sx={{ padding: "10%", fontSize: "16px" }}>
                 <Grid container spacing={2}>
                   <Grid item xs={12} sm={6}>
                     <StyledTextField
+                      className="Signup-text"
                       variant="outlined"
                       required
                       fullWidth
@@ -48,6 +58,7 @@ export default function SignUpSection(props) {
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <StyledTextField
+                      className="Signup-text"
                       variant="outlined"
                       required
                       fullWidth
@@ -59,6 +70,7 @@ export default function SignUpSection(props) {
                   </Grid>
                   <Grid item xs={12}>
                     <StyledTextField
+                      className="Signup-text"
                       variant="outlined"
                       required
                       fullWidth
@@ -71,7 +83,11 @@ export default function SignUpSection(props) {
                 </Grid>
                 <Box my={2}>
                   <Button
-                    sx={{ backgroundColor: ColorCode.StormGreen}}
+                    sx={{
+                      backgroundColor: ColorCode.StormGreen,
+                      fontFamily: "Lato",
+                    }}
+                    className="Signup-text"
                     type="submit"
                     fullWidth
                     variant="contained"
@@ -79,11 +95,6 @@ export default function SignUpSection(props) {
                   >
                     {content["01_primary-action"]}
                   </Button>
-                </Box>
-                <Box textAlign="right">
-                  <Link href="#" variant="body2">
-                    {content["01_secondary-action"]}
-                  </Link>
                 </Box>
               </Paper>
             </form>

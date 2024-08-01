@@ -46,11 +46,17 @@
 
 .Looped-video {
   width: 100%;
+  height: auto;
 }
 
 @font-face {
   font-family: "BlackBubbles-Regular";
   src: url('./assets/BlackBubbles-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url('./assets/Lato-Black.ttf') format('truetype');
 }
 
 .fade-in {
@@ -91,10 +97,6 @@
 
 }
 
-.Looped-video {
-  height: 100%;
-}
-
 .Logo-main {
   position:absolute;
   height: 30%;
@@ -110,4 +112,9 @@
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+.Signup-text {
+  font-family: 'Lato';
+  text-shadow: none;
 }
