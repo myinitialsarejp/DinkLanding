@@ -7,7 +7,6 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { ColorCode } from "../enum/colorCodes.ts";
 import { Paper, styled } from "@mui/material";
-import { ConnectToMongo } from "../api/MongoAPI.js";
 
 export default function SignUpSection(props) {
   const content = {
