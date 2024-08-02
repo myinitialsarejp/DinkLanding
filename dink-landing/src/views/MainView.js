@@ -5,11 +5,13 @@ import { Alignment } from "../enum/alignment.ts";
 import Footer from "../components/Footer.js";
 import SignUpSection from "../components/SignUpSection.js";
 import VideoLogo from "../components/VideoLogo.js";
+import MenuDrawer from "../components/MenuDrawer.js";
 
 const MainView = () => {
   return (
     <div>
       <VideoLogo />
+      <MenuDrawer />
       {/*<MenuBar />*/}
       <Grid
         sx={{padding: "5%" }}
