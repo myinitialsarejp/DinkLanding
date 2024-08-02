@@ -6,12 +6,21 @@ import Footer from "../components/Footer.js";
 import SignUpSection from "../components/SignUpSection.js";
 import VideoLogo from "../components/VideoLogo.js";
 import MenuDrawer from "../components/MenuDrawer.js";
+import EmailConfirmation from "../components/EmailConfirmation.js";
+import { useState } from "react";
 
 const MainView = () => {
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const toggleConfirmation = () => {
+    showConfirmation ? setShowConfirmation(false) : setShowConfirmation(true)
+  }
+
   return (
     <div>
       <VideoLogo />
       <MenuDrawer />
+      <EmailConfirmation isOpen={showConfirmation} setIsOpen={setShowConfirmation}/>
       {/*<MenuBar />*/}
       <Grid
         sx={{padding: "5%" }}
@@ -59,7 +68,7 @@ const MainView = () => {
                 ></TextField>
                 <Button sx={{ backgroundColor: ColorCode.StormGreen, ml:'20px'}} size='large' variant='contained'>Submit!</Button>
               </Box> */}
-              <SignUpSection />
+              <SignUpSection toggleConfirmation={toggleConfirmation}/>
             </>
           }
         />

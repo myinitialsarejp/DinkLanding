@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { ColorCode } from "../enum/colorCodes.ts";
 import { Paper, styled } from "@mui/material";
+import { ConnectToMongo } from "../api/MongoAPI.js";
 
 export default function SignUpSection(props) {
   const content = {
@@ -14,6 +15,7 @@ export default function SignUpSection(props) {
     "01_primary-action": "Sign up",
     ...props.content,
   };
+  const toggleConfirmation = props.toggleConfirmation
 
   const StyledTextField = styled(TextField)({
     input: {
@@ -30,7 +32,7 @@ export default function SignUpSection(props) {
 
   const onSubmit = (event) =>{
     event.preventDefault();
-    console.log("Submitted");
+    toggleConfirmation()
   }
 
   return (
