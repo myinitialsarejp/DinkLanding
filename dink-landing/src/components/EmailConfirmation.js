@@ -1,4 +1,4 @@
-import { Slide, Snackbar, SnackbarContent, Typography } from "@mui/material";
+import { Slide, Snackbar, Typography } from "@mui/material";
 import { ColorCode } from "../enum/colorCodes.ts"
 
 const EmailConfirmation = (props) => {
