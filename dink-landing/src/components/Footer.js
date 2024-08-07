@@ -24,10 +24,10 @@ export default function Footer(props) {
         },
       }}
     >
-      <Paper elevation={12} maxWidth="100%" sx={{ backgroundColor: ColorCode.PineNut }}>
+      <Paper elevation={12} maxWidth="100%" sx={{ backgroundColor: ColorCode.StormGreen }}>
         <Box padding='20px' py={6} display="flex" flexWrap="wrap" alignItems="center">
           <Typography
-            color="textSecondary"
+            className='footer'
             component="p"
             gutterBottom={false}
             sx={{
@@ -48,13 +48,13 @@ export default function Footer(props) {
               },
             }}
           >
-            <IconButton color="textSecondary" aria-label="Facebook">
+            <IconButton className='footer' aria-label="Facebook" sx={{marginX: '5px'}}>
               <FacebookIcon className="svg-icons"/>
             </IconButton>
-            <IconButton color="textSecondary" aria-label="Instagram">
+            <IconButton className='footer' aria-label="Instagram" sx={{marginX: '5px'}}>
               <InstagramIcon className="svg-icons"/>
             </IconButton>
-            <IconButton color="textSecondary" aria-label="LinkedIn">
+            <IconButton className='footer' aria-label="LinkedIn" sx={{marginX: '5px'}}>
               <LinkedInIcon className="svg-icons"/>
             </IconButton>
           </Box>

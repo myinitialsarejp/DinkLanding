@@ -1,4 +1,4 @@
-import dinkLogo from "../assets/dinkLogo_light.svg";
+import dinkLogo from "../assets/dinkLogo.svg";
 import { Grid, Typography } from "@mui/material";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
