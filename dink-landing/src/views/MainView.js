@@ -1,11 +1,9 @@
-import dinkLogo from "../assets/dinkLogo.svg";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import FadeInSection from "../components/FadeInSection.js";
 import { Alignment } from "../enum/alignment.ts";
 import Footer from "../components/Footer.js";
 import SignUpSection from "../components/SignUpSection.js";
 import VideoLogo from "../components/VideoLogo.js";
-import MenuDrawer from "../components/MenuDrawer.js";
 import EmailConfirmation from "../components/EmailConfirmation.js";
 import { useState } from "react";
 
